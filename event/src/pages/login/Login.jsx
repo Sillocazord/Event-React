@@ -7,7 +7,7 @@ const Login = () => {
             <link rel="stylesheet" href="https://use.typekit.net/pam4ubo.css"></link>
             <div className="banner"></div>
             <section className="section_login">
-                <img src={Logo} alt="Event+" />
+                <img className="bigger" src={Logo} alt="Event+" />
                 <form action="" className="form_login">
                     <div className="campos_login">
                         <div className="campos_input">

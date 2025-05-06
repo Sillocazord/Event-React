@@ -18,7 +18,7 @@
     justify-content: center;
     flex: 1;
 }
-img {
+.bigger{
     width: 250px;
     margin-bottom: 90px;
 }

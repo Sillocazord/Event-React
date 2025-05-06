@@ -7,15 +7,13 @@ header{
     justify-content: space-evenly;
     align-items: center;
 }
-.logozinha{
-    width: 110px;
-}
 
 .link-header{
     margin-left:65px ;
     margin-right: 5px;
     text-decoration: none;
     color: #1f1848;
+
     font-family: "poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -24,4 +22,5 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 40px;
 }

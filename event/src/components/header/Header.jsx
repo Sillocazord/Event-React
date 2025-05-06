@@ -7,7 +7,7 @@ const Header = () => {
             <link rel="stylesheet" href="https://use.typekit.net/pam4ubo.css"></link>
 
             <div className="layout_grid header-header">
-            <img className="logozinha" src={Logo} alt="Event+" />
+            <img src={Logo} alt=""/>
             <nav className="nav_header">
                 <a href="" className="link-header">Home</a>
                 <a href="" className="link-header">Eventos</a>
@@ -20,7 +20,7 @@ const Header = () => {
             </nav>
             <nav className="navas_header">
                 <a href="" className="link-header">Administrador</a>
-                <img src={Portinha} alt="" />
+                <img src={Portinha} alt=""/>
                 {/* <Link className="link-header" to="/login">Administrador</Link> */}
             </nav>
             </div>
