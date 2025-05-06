@@ -1,0 +1,55 @@
+.listagem {
+    min-height: calc(100vh - (75px + 252px + 40px));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    background-color: #B51D44;
+    color: #ffffff;
+
+    font-family: "poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.listagem h1 {
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.listagem hr {
+    max-width: 200px;
+    width: 100%;
+    margin-top: 9px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ffffff;
+}
+
+.item_lista img {
+    height: 15px;
+}
+
+.tabela {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.tabela table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table_cabecalho {
+    border-bottom: solid 1px #ffffff;
+}
+
+.item_lista td {
+    padding: 20px 0 10px 0;
+}
+
+.item_lista {
+    text-align: center;
+    border-bottom: solid 1px #ffffff;
+    /*#73061b*/
+}
