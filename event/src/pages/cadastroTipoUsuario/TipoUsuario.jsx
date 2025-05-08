@@ -16,6 +16,7 @@ const TipoUsuario = () => {
         tituloLista = "Lista de Tipos Usuarios"
         nomezin= "Tipo Usuarios"
         visible = "none"
+        editar = "Editar"
         />
         <Footer/>
         </>

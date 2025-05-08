@@ -15,7 +15,9 @@ const TipoEvento = () =>{
         />
         <Listar
         tituloLista = "Lista de Tipos Eventos"
-        nomezin= "Tipo Eventos"
+        nomezin = "Tipo Eventos"
+        visible = "none"
+        editar = "Editar"
         />
         <Footer/>
         </>

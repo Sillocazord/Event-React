@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "../pages/login/Login";
 import TipoEvento from "../pages/cadastroTipoEvento/TipoEvento";
 import TipoUsuario from "../pages/cadastroTipoUsuario/TipoUsuario";
-import Eventos from "../pages/cadastroEvento/Eventos";
+import EventosListar from "../pages/cadastroEvento/EventosListar";
 
 const Rotas = () => {
     return(
@@ -12,7 +12,7 @@ const Rotas = () => {
             <Route path="/Login" element={<Login/>}/>
             <Route path="/Tipoevento" element={<TipoEvento/>}/>
             <Route path="/Tipousuario" element={<TipoUsuario/>}/>
-            <Route path="/Cadastroevento" element={<Eventos/>}/>
+            <Route path="/Cadastroevento" element={<EventosListar/>}/>
 
         </Routes>
         </BrowserRouter>

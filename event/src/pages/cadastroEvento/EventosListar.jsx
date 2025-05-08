@@ -2,7 +2,7 @@ import Footer from "../../components/footer/Footer";
 import Listar from "../../components/listar/Listar";
 import Cadastro from "../../components/cadastro/Cadastro";
 import Header from "../../components/header/Header";
-const Eventos = () => {
+const EventosListar = () => {
     return(
         <>
          <Header/>
@@ -16,9 +16,11 @@ const Eventos = () => {
         <Listar
         tituloLista = "Lista de Eventos"
         nomezin= "Eventos"
+        // visibly = "none"
+        editar = "Editar"
         />
         <Footer/>
         </>
     )
 }
-export default Eventos;
+export default EventosListar;

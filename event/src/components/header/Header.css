@@ -24,3 +24,19 @@ header{
     align-items: center;
     width: 40px;
 }
+
+@media screen and (max-width: 768px) {
+    .header-header img{
+        height: 15px;
+    }
+    .header-header{
+        justify-content: center;
+        align-items: center;
+    }
+    .link-header{
+        display: none;
+    }
+    .navas_header{
+        display: none;
+    }
+}
