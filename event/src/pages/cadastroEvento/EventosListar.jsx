@@ -5,7 +5,8 @@ import Header from "../../components/header/Header";
 const EventosListar = () => {
     return(
         <>
-         <Header/>
+         <Header
+         namaewa = "Administrador"/>
         <Cadastro
         tituloCadastro= "Cadastro de Eventos"
         // visibilidade = "none"

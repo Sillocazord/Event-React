@@ -1,7 +1,7 @@
 import "./Header.css";
 import Logo from "../../assets/img/logo.svg"
 import Portinha from "../../assets/img/Vector.png"
-const Header = () => {
+const Header = (props) => {
     return(
         <header>
             <link rel="stylesheet" href="https://use.typekit.net/pam4ubo.css"></link>
@@ -19,7 +19,7 @@ const Header = () => {
                 <Link className="link-header" to="/Contatos">Contatos</Link> */}
             </nav>
             <nav className="navas_header">
-                <a href="" className="link-header">Administrador</a>
+                <a href="" className="link-header">{props.namaewa}</a>
                 <img src={Portinha} alt=""/>
                 {/* <Link className="link-header" to="/login">Administrador</Link> */}
             </nav>

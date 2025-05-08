@@ -5,7 +5,8 @@ import Footer from "../../components/footer/Footer";
 const TipoUsuario = () => {
     return(
         <>
-    <Header/>
+    <Header
+    namaewa = "Administrador"/>
         <Cadastro
         tituloCadastro= "Cadastro de Tipo Usuario"
         visibilidade = "none"

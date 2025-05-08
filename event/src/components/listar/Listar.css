@@ -45,6 +45,7 @@
 }
 .tabela table{
     width: 100%;
+    border-collapse: collapse;
     
 }
 .tabela{
@@ -65,6 +66,9 @@
     width: 750px;
     text-align: start;
 }
+.tabela .item_lista :nth-child(3){
+    width: 110px;
+}
 .tabela .item_lista :nth-child(2){
     width: 550px;
     text-align: start;
@@ -74,15 +78,11 @@
     width: 100px;
     margin-top: 40px;
  }
-tr{
-    border-bottom: 1px solid #ffffff;
-}
 .item_lista td {
     padding: 20px 0 10px 0;
+    border-collapse: collapse;
     
 }
-
-
 @media screen and (max-width:728px) {
     .tabela{
         font-size: 10px; 
@@ -92,6 +92,5 @@ tr{
     }
     .listagem h1 {
         font-size: large;
-    }
-    
+    }  
 }

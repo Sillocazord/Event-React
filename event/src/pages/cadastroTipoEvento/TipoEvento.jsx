@@ -6,7 +6,8 @@ import Listar from "../../components/listar/Listar";
 const TipoEvento = () =>{
     return(
         <>
-        <Header/>
+        <Header
+        namaewa = "Administrador"/>
         <Cadastro
         tituloCadastro= "Cadastro de Tipo Evento"
         visibilidade = "none"
