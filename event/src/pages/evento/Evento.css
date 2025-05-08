@@ -31,6 +31,7 @@
     width: 100%;
     max-width: 790px;
     display: flex;
+    border-collapse: collapse;
      /* flex-direction: flex-start; */
 }
 .eventos_select select{
@@ -43,6 +44,7 @@
    height: 45px;
    margin-bottom: 60px;
    color: #201849;
+
 }
 .tabela_eventos{
     width: 100%;
@@ -50,15 +52,19 @@
     margin-top: 30px;
     display: flex;
     justify-content: center;
+    border-bottom: 1px solid #201849;
+    border-collapse: collapse;
+}
+.sub_eventos tr{
+    border-bottom: 1px solid #B51D44;
+    border-collapse: collapse;
 }
 .sub_eventos th{
-    text-align: center;
+    /* text-align: center; */
     border-bottom: 1px solid #B51D44;
     border-collapse: collapse;
 }
 .itens_eventos td{
-    border-bottom: 1px solid #201849;
-    border-collapse: collapse;
     padding: 20px 5px;
 }
 .tabela_eventos th:first-child{
@@ -84,4 +90,7 @@
 .tabela_eventos th:nth-child(4){
     text-align: center;
     margin-top: 20px;
+}
+@media screen and(max-width:768px) {
+    
 }

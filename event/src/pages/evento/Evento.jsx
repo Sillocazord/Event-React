@@ -4,6 +4,7 @@ import sim from "../../assets/img/sim.png"
 import nao from "../../assets/img/nao.png"
 import Footer from "../../components/footer/Footer";
 import "./Evento.css";
+import Checkin from "../../components/checkin/Checkin"
 const Evento = () => {
     return (
         <>
@@ -38,14 +39,14 @@ const Evento = () => {
                                     <td data-cell="Título">Nome Evento</td>
                                     <td data-cell="Tipo Evento">Tipo Evento</td>
                                     <td data-cell="Comentários"><img src={Balao} alt="Balao de texto" /></td>
-                                    <td data-cell="Participar"><img src={sim} alt="Confirmado" /></td>
+                                    <td data-cell="Participar"><Checkin/></td>
                                 </tr>
 
                                 <tr className="itens_eventos">
                                     <td data-cell="Título">Nome Evento</td>
                                     <td data-cell="Tipo Evento">Tipo Evento</td>
                                     <td data-cell="Comentários"><img src={Balao} alt="Balao de texto" /></td>
-                                    <td data-cell="Participar"><img src={nao} alt="Não confirmado" /></td>
+                                    <td data-cell="Participar"><Checkin/></td>
                                 </tr>
                             </tbody>
                         </table>
