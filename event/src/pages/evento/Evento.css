@@ -92,6 +92,30 @@ table{
     text-align: center;
     margin-top: 20px;
 }
-@media screen and(max-width:768px) {
-    
+@media screen and (max-width:768px) {
+    .tabela_eventos{
+        font-size: 12px; 
+    }
+    .eventos_select{
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .tabela_eventos .item_eventos :nth-child(3){
+        width: 110px;
+    }
+    .div_evento h1 {
+        font-size: large;
+    }  
+}
+@media screen and (max-width:500px) {
+    .tabela_eventos{
+        font-size: 10px; 
+    }
+    .tabela_eventos .item_eventos :nth-child(3){
+        width: 110px;
+    }
+    .div_evento h1 {
+        font-size: large;
+    }  
 }
