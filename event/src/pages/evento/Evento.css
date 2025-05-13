@@ -31,7 +31,7 @@
     width: 100%;
     max-width: 790px;
     display: flex;
-    border-collapse: collapse;
+    /* border-collapse: collapse; */
      /* flex-direction: flex-start; */
 }
 .eventos_select select{
@@ -44,7 +44,7 @@
    height: 45px;
    margin-bottom: 60px;
    color: #201849;
-
+        border-collapse: collapse;
 }
 .tabela_eventos{
     width: 100%;
@@ -53,22 +53,23 @@
     display: flex;
     justify-content: center;
     border-bottom: 1px solid #201849;
-    border-collapse: collapse;
-}
-.sub_eventos tr{
-    border-bottom: 1px solid #B51D44;
-    border-collapse: collapse;
+    /* border-collapse: collapse; */
 }
 .sub_eventos th{
     /* text-align: center; */
-    border-bottom: 1px solid #B51D44;
-    border-collapse: collapse;
+    border-bottom: solid 1px #B51D44;
+        /* border-collapse: collapse;
+        border-spacing: none; */
 }
 .itens_eventos td{
     padding: 20px 5px;
+    
+}
+table{
+    border-collapse: collapse;
 }
 .tabela_eventos th:first-child{
-    width:200px;
+    width:420px;
     text-align: start;
     margin-top: 20px;
 }

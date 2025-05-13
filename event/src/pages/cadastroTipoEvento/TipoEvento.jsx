@@ -7,7 +7,7 @@ const TipoEvento = () =>{
     return(
         <>
         <Header
-        namaewa = "Administrador"/>
+        nomeUsuario = "Administrador"/>
         <Cadastro
         tituloCadastro= "Cadastro de Tipo Evento"
         visibilidade = "none"
