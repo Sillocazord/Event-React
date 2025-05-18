@@ -9,12 +9,8 @@ const Evento = () => {
     return (
         <>
             <Header
-<<<<<<< HEAD
-                namaewa="Aluno"
-                />
-=======
-                nomeUsuario="Aluno" />
->>>>>>> 1f08931d28cbcf2321c29634c179b2a68a1a01d5
+                nomeUsuario ="Aluno"
+                 />
 
             <section className="sessao">
                 <div className="layout_grid div_evento">

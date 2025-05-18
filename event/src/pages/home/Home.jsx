@@ -1,8 +1,7 @@
-import Botao from "../../components/botao/Botao";
+
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 import BannerHome from "../../assets/img/bannerhome.png"
-import Banner2 from "../../assets/img/banner2.png"
 import { Link } from "react-router-dom";
 import "./Home.css"
 const Home = () => {
@@ -10,7 +9,6 @@ const Home = () => {
         <>
 
             <Header
-                Usuario="none"
                 naver="none"
             />
             <main className="layout_grid" >
@@ -62,9 +60,19 @@ const Home = () => {
                     {/* <img src={Banner2} alt="Imagem meio roxa com duas faixas escuras" /> */}
                     <h2>Visão</h2>
                     <hr />
+                    <div className="segundo-p">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus neque ipsum voluptatibus animi laudantium enim eius fugiat dolor voluptas nesciunt quos asperiores rem, eum dicta, expedita, minus odit facere eaque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ducimus aperiam recusandae, dolorem illum voluptatem, in nemo voluptas eum saepe deserunt officiis non dolores minima quos quam animi praesentium. Inventore?
+                        </p>
+                    </div>
                 </div>
                 {/*Segundo Banner */}
 
+                    {/*Pre-footer */}
+                <div className="pre-footer">
+
+                </div>
+                    {/*Pré-footer */}
             </main>
 
             <Footer />
