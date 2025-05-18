@@ -8,6 +8,7 @@ const TipoEvento = () =>{
         <>
         <Header
         nomeUsuario = "Administrador"
+        botaozinho = "none"
         />
         <Cadastro
         tituloCadastro= "Cadastro de Tipo Evento"

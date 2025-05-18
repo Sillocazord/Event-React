@@ -7,6 +7,7 @@ const EventosListar = () => {
         <>
          <Header
          nomeUsuario = "Administrador"
+         botaozinho = "none"
         />
         <Cadastro
         tituloCadastro= "Cadastro de Eventos"

@@ -20,11 +20,11 @@
     align-items: center;
 }
 
-.card-pai{
+.card-pai {
     display: flex;
 }
 
-.cardzin{
+.cardzin {
     font: "poppins";
     display: flex;
     flex-direction: column;
@@ -34,12 +34,12 @@
     width: 225px;
     margin-left: 15px;
     margin-right: 15px;
-    border: 2px solid #821B47 ;
+    border: 2px solid #821B47;
     font-size: small;
     border-radius: 5px;
 }
 
-.link-card{
+.link-card {
     color: #B51D44;
     text-decoration: none;
     font-size: medium;
@@ -50,10 +50,10 @@
     width: 100%;
 } */
 
-.segundo-banner{
+.segundo-banner {
     background-image: url("../../assets/img/banner2.png");
     width: 100%;
-    height:300px;
+    height: 300px;
     color: white;
 
     display: flex;
@@ -62,13 +62,13 @@
     margin-top: 50px
 }
 
-.segundo-banner h2{
+.segundo-banner h2 {
     margin-top: 20px;
-    
+
 }
 
 .segundo-banner hr {
-     max-width: 200px;
+    max-width: 200px;
     width: 100%;
     margin-top: 7px;
     margin-bottom: 50px;
@@ -76,24 +76,24 @@
     border-style: solid;
 }
 
-.segundo-p{
+.segundo-p {
     width: 800px;
     font-size: small;
 }
 
-.pre-footer{
+.pre-footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-        border-bottom:1px solid #00000055;
+    border-bottom: 1px solid #00000055;
 }
 
-.pre-footer h2{
+.pre-footer h2 {
     margin-top: 20px;
 }
 
-.pre-footer hr{
+.pre-footer hr {
     max-width: 200px;
     width: 100%;
     margin-top: 7px;
@@ -103,17 +103,17 @@
     border-color: #B51D44;
 }
 
-.pai-pre-footer{
+.pai-pre-footer {
     display: flex;
     max-width: 100%s;
 
 }
 
-.mapa{
+.mapa {
     margin-right: 20px;
 }
 
-.informacoes{
+.informacoes {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

@@ -20,6 +20,9 @@ const Header = (props) => {
                 <Link className="link-header" to="/Evento">Eventos</Link>
                 <Link className="link-header" to="/Tipousuario" style={{display:props.Usuario}}>Usuários</Link>
                 <Link className="link-header" to="/tipoevento">Contatos</Link> 
+
+                <button className="logar" style={{display:props.botaozinho}}>Logar</button>
+
             </nav>
             <nav className="navas_header" style={{display:props.naver}}>
             

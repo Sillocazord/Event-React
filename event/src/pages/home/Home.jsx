@@ -8,8 +8,8 @@ import "./Home.css"
 const Home = () => {
     return (   //Home meus crias
         <>
-
             <Header
+                Usuario = "none"
                 naver="none"
             />
             <main className="layout_grid" >

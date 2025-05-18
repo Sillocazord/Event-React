@@ -9,8 +9,9 @@ const Evento = () => {
     return (
         <>
             <Header
-                nomeUsuario ="Aluno"
-                 />
+                nomeUsuario="Aluno"
+                botaozinho="none"
+            />
 
             <section className="sessao">
                 <div className="layout_grid div_evento">
@@ -40,21 +41,21 @@ const Evento = () => {
                                     <td data-cell="Título">Nome Evento</td>
                                     <td data-cell="Tipo Evento">Tipo Evento</td>
                                     <td data-cell="Comentários"><img src={Balao} alt="Balao de texto" /></td>
-                                    <td data-cell="Participar"><Checkin/></td>
+                                    <td data-cell="Participar"><Checkin /></td>
                                 </tr>
 
                                 <tr className="itens_eventos">
                                     <td data-cell="Título">Nome Evento</td>
                                     <td data-cell="Tipo Evento">Tipo Evento</td>
                                     <td data-cell="Comentários"><img src={Balao} alt="Balao de texto" /></td>
-                                    <td data-cell="Participar"><Checkin/></td>
+                                    <td data-cell="Participar"><Checkin /></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </section>
-            <Footer/>
+            <Footer />
         </>
     )
 }
