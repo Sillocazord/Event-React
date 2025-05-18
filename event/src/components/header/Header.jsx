@@ -22,8 +22,11 @@ const Header = (props) => {
                 <Link className="link-header" to="/tipoevento">Contatos</Link> 
             </nav>
             <nav className="navas_header" style={{display:props.naver}}>
-                
-                <Link className="link-header" to="/Cadastroevento">{props.namaewa}</Link>
+            
+                {/* // <Link className="link-header" to="/Cadastroevento">{props.namaewa}</Link> */}
+
+                <Link className="link-header" to="/">{props.nomeUsuario}</Link>
+
                 <img src={Portinha} alt=""/>
                 {/* <a href="" className="link-header">{props.namaewa}</a> */}
             </nav>

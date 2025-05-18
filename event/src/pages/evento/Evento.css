@@ -35,7 +35,7 @@ table{
     width: 100%;
     max-width: 790px;
     display: flex;
-    border-collapse: collapse;
+    /* border-collapse: collapse; */
      /* flex-direction: flex-start; */
 }
 .eventos_select select{
@@ -48,7 +48,7 @@ table{
    height: 45px;
    margin-bottom: 60px;
    color: #201849;
-
+        border-collapse: collapse;
 }
 .tabela_eventos{
     width: 100%;
@@ -57,22 +57,23 @@ table{
     display: flex;
     justify-content: center;
     border-bottom: 1px solid #201849;
-    border-collapse: collapse;
-}
-.sub_eventos tr{
-    border-bottom: 1px solid #B51D44;
-    border-collapse: collapse;
+    /* border-collapse: collapse; */
 }
 .sub_eventos th{
     /* text-align: center; */
-    border-bottom: 1px solid #B51D44;
-    border-collapse: collapse;
+    border-bottom: solid 1px #B51D44;
+        /* border-collapse: collapse;
+        border-spacing: none; */
 }
 .itens_eventos td{
     padding: 20px 5px;
+    
+}
+table{
+    border-collapse: collapse;
 }
 .tabela_eventos th:first-child{
-    width:200px;
+    width:420px;
     text-align: start;
     margin-top: 20px;
 }
@@ -95,6 +96,30 @@ table{
     text-align: center;
     margin-top: 20px;
 }
-@media screen and(max-width:768px) {
-    
+@media screen and (max-width:768px) {
+    .tabela_eventos{
+        font-size: 12px; 
+    }
+    .eventos_select{
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .tabela_eventos .item_eventos :nth-child(3){
+        width: 110px;
+    }
+    .div_evento h1 {
+        font-size: large;
+    }  
+}
+@media screen and (max-width:500px) {
+    .tabela_eventos{
+        font-size: 10px; 
+    }
+    .tabela_eventos .item_eventos :nth-child(3){
+        width: 110px;
+    }
+    .div_evento h1 {
+        font-size: large;
+    }  
 }
