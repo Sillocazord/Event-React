@@ -6,7 +6,8 @@ const EventosListar = () => {
     return(
         <>
          <Header
-         namaewa = "Administrador"/>
+         namaewa = "Administrador"
+        />
         <Cadastro
         tituloCadastro= "Cadastro de Eventos"
         // visibilidade = "none"

@@ -2,6 +2,7 @@ import "./Header.css";
 import Logo from "../../assets/img/logo.svg"
 import Portinha from "../../assets/img/Vector.png"
 import { Link } from "react-router-dom";
+import Botao from "../botao/Botao";
 const Header = (props) => {
     return(
         <header>
@@ -15,14 +16,14 @@ const Header = (props) => {
                 <a href="" className="link-header">Usuários</a> 
                 <a href="" className="link-header">Contatos</a>*/}
                 
-                <Link className="link-header" to="/Evento">Home</Link>
-                <Link className="link-header" to="/Tipoevento">Eventos</Link>
-                <Link className="link-header" to="/Tipousuario">Usuários</Link>
-                <Link className="link-header" to="/Cadastroevento">Contatos</Link> 
+                <Link className="link-header" to="/">Home</Link>
+                <Link className="link-header" to="/Evento">Eventos</Link>
+                <Link className="link-header" to="/Tipousuario" style={{display:props.Usuario}}>Usuários</Link>
+                <Link className="link-header" to="/tipoevento">Contatos</Link> 
             </nav>
-            <nav className="navas_header">
+            <nav className="navas_header" style={{display:props.naver}}>
                 
-                <Link className="link-header" to="/">{props.namaewa}</Link>
+                <Link className="link-header" to="/Cadastroevento">{props.namaewa}</Link>
                 <img src={Portinha} alt=""/>
                 {/* <a href="" className="link-header">{props.namaewa}</a> */}
             </nav>

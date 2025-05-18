@@ -6,7 +6,8 @@ const TipoUsuario = () => {
     return(
         <>
     <Header
-    namaewa = "Administrador"/>
+    namaewa = "Administrador"
+    />
         <Cadastro
         tituloCadastro= "Cadastro de Tipo Usuario"
         visibilidade = "none"

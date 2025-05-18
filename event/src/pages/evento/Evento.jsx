@@ -9,7 +9,8 @@ const Evento = () => {
     return (
         <>
             <Header
-                namaewa="Aluno" />
+                namaewa="Aluno"
+                />
 
             <section className="sessao">
                 <div className="layout_grid div_evento">
