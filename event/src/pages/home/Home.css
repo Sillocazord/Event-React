@@ -80,3 +80,47 @@
     width: 800px;
     font-size: small;
 }
+
+.pre-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        border-bottom:1px solid #00000055;
+}
+
+.pre-footer h2{
+    margin-top: 20px;
+}
+
+.pre-footer hr{
+    max-width: 200px;
+    width: 100%;
+    margin-top: 7px;
+    margin-bottom: 50px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #B51D44;
+}
+
+.pai-pre-footer{
+    display: flex;
+    max-width: 100%s;
+
+}
+
+.mapa{
+    margin-right: 20px;
+}
+
+.informacoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 20px;
+}
+
+.fim {
+    width: 100%;
+    border-bottom: solid 2px #00000055;
+}

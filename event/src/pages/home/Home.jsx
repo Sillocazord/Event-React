@@ -3,6 +3,7 @@ import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 import BannerHome from "../../assets/img/bannerhome.png"
 import { Link } from "react-router-dom";
+import Mapinha from "../../assets/img/mapinha.png"
 import "./Home.css"
 const Home = () => {
     return (   //Home meus crias
@@ -68,11 +69,27 @@ const Home = () => {
                 </div>
                 {/*Segundo Banner */}
 
-                    {/*Pre-footer */}
+                {/*Pre-footer */}
                 <div className="pre-footer">
 
+                    <h2>Contato</h2>
+                    <hr />
+
+                    <div className="pai-pre-footer">
+
+                        <div className="mapa">
+                            <img src={Mapinha} alt="" />
+                        </div>
+
+                        <div className="informacoes">
+                            <p>Rua Niterói, 180 - Centro</p>
+                            <p>São Caetano  do  Sul - SP</p>
+                            <p>(11) 4225-2000</p>
+                        </div>
+                       
+                    </div>
                 </div>
-                    {/*Pré-footer */}
+                {/*Pré-footer */}
             </main>
 
             <Footer />
