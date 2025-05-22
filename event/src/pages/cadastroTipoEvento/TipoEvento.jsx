@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
+//import de componentes
 import Cadastro from "../../components/cadastro/Cadastro";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 import Listar from "../../components/listar/Listar";
+//import de componentes
 import api from "../../Services/services";
 import Swal from "sweetalert2";
 
@@ -43,10 +45,10 @@ const TipoEvento = () => {
             } catch (error) {
                 console.log(error);
 
-                alertar("erro","Erro! Entre em contato com o suporte")
+                alertar("error","Erro! Entre em contato com o suporte")
             }
         } else {
-            alertar("erro","Erro! Entre em contato com o suporte")
+            alertar("error","Erro! Entre em contato com o suporte")
         }
 
     };
@@ -106,9 +108,31 @@ const TipoEvento = () => {
 
     }
 
-    // async function editarTipoEvento(tipoEvento) {
-        
-    // }
+    async function editarTipoEvento(tipoEvento) {
+        const { value: novoTipoEvento } = await Swal.fire({
+            title: "Insira o novo nome do Tipo Evento",
+            input: "text",
+            inputLabel: "Novo nome do TipoEvento:",
+            //através do input value, faremos com que o input ja venha preenchido com o gênero que queremos editar
+            inputValue: tipoEvento.nome,
+            showCancelButton: true,
+            inputValidator: (value) => {
+                if (!value) {
+                    return "Você tem que escrever alguma coisa! >:(";
+                }
+            }
+        });
+        if (novoTipoEvento) {
+             try {
+                 await api.put(`tipoEvento/${tipoEvento.tipoEventoID}`,{TituloTipoEvento : novoTipoEvento});
+                 Swal.fire(`Seu gênero agora é: ${novoTipoEvento}`);
+             } catch (error) {
+                console.log(error);
+                
+             }
+            
+        }
+    }
 
     useEffect(() => {
         listarTipoEvento();
@@ -137,8 +161,8 @@ const TipoEvento = () => {
                 visible="none"
                 edit="Editar"
 
-                deletar={excluirTipoEvento}
-                // editar={s}
+                delet={excluirTipoEvento}
+                editar={editarTipoEvento}
                 tipoLista="tipoEvento"
                 lista={listaTipoEvento}
             />
