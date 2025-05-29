@@ -25,7 +25,7 @@
 
 .tabela .table_cabecalho th{
     border-bottom: 1px solid #ffffff;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 .listagem h1 {
@@ -62,7 +62,7 @@
     border-bottom:1px solid #ffffff;
 }
 
-.tabela .table_cabecalho :first-child{
+/* .tabela .table_cabecalho :first-child{
     width:199px;
 }
 
@@ -76,7 +76,7 @@
 .tabela .item_lista :nth-child(2){
     width: 550px;
     text-align: start;
-}
+} */
  .tabela .table_cabecalho {
     border-bottom: 1px solid #ffffff;
     width: 100px;

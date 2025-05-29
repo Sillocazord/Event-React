@@ -91,7 +91,7 @@ const TipoUsuario = () => {
 
                 swalWithBootstrapButtons.fire({
                     title: "Deletado!",
-                    text: "TipoEvento deletado com sucesso",
+                    text: "TipoUsuario deletado com sucesso",
                     icon: "success"
                 })
             } else if (

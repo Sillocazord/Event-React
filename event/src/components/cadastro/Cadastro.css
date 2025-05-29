@@ -16,6 +16,7 @@
 
 .cadastro_pai{
     display: flex;
+    align-items: center;
 }
 .banner_cadastro{
     margin-right: 250px;
@@ -40,7 +41,8 @@
 }
 
 .campo_cad_nome input,
-.campo_cad_tipo select{
+.campo_cad_tipo select,
+.campo_cad_tipo input{
     border-left: none;
     border-right: none;
     border-top: none;
@@ -48,7 +50,11 @@
    padding: 0 3px;
    width: 280px;
    height: 45px;
-   margin-bottom: 60px;
+   margin-bottom: 30px;
+}
+.campo_cad_tipo{
+    display: flex;
+    flex-direction: column;
 }
 @media screen and (max-width: 880px){
     .campos_input{

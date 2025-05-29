@@ -30,12 +30,20 @@ const Cadastro = (props) => {
 
                             {/* Select da pagina Eventos */}
                         <div className="campo_cad_tipo" style={{ display: props.visibilidade }}>
+                            <input type="date" placeholder="Data"/>
                             <select name="TipoEvento" id="">
                                 <option value="">Vivo</option>
                                 <option value="">Tim</option>
                                 <option value="">Claro</option>
                                 <option value="">Oi</option>
                             </select>
+
+                            <select name="Instituições" id="">
+                                <option value="">Sekaaaai</option>
+                                <option value="">Miku Miku</option>
+                            </select>
+
+                            <input type="text" placeholder="Descrição" />
                         </div>
                         <Botao nomeDoBotao="Cadastrar" />
                     </div>

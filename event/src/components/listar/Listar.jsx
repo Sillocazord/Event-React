@@ -14,9 +14,11 @@ const Listar = (props) => {
                             <thead>
                                 <tr className="table_cabecalho">
                                     <th>{props.nomezin}</th>
+                                    <th style={{ display: props.visible }}>Data</th>
                                     <th style={{ display: props.visible }}>TipoEvento</th>
                                     <th>{props.edit}</th>
                                     <th style={{ display: props.visibly }}>Excluir</th>
+                                    <th style={{ display: props.visible }}>Descrição</th>
                                     {/* <th id="sim" style={{display:props.acao}}>Ações</th> */}
                                 </tr>
                             </thead>
@@ -27,14 +29,23 @@ const Listar = (props) => {
                                         //Use console.log(item), para identificar o nome do id certinho caso esteja dando erro na requisição(é uma das possíveis soluções)
 
                                         <tr className="item_lista"
+
                                             key={props.tipoLista == "tipoEvento" ? item.TituloTipoEvento : item.TituloTipoUsuario}>
+
                                             <td data-cell={props.nomezin}>
                                                 {props.tipoLista == "tipoEvento" ? item.tituloTipoEvento : item.tituloTipoUsuario}
+                                                {/*Nome dos Eventos / Nome dos Usuarios*/}
+                                                {props.tipoLista == "evento" ? item.nomeEvento : item.nome}
+                                                {/* props.tipoLista == "tipoEvento" ? item.TituloTipoEvento : props.tipoLista == "TipoUsuario"?item.TituloTipoUsuario : props.tipoLista == "evento" ? item.NomeEvento */}
+
                                             </td>
+
                                             <td style={{ display: props.visible }} data-cell="TipoEvento">UIA</td>
+
                                             <td data-cell="Editar Ações">
                                                 <img src={Lapizinho} alt="lapizin" onClick={() => props.editar(item)} style={{ cursor: "pointer" }} />
                                             </td>
+                                            
                                             <td data-cell="Excluir Ações">
                                                 <img src={Lixinho} alt="lixin" onClick={() => props.delet(props.tipoLista == "tipoEvento" ? item.tipoEventoID : item.tipoUsuarioID)} style={{ cursor: "pointer" }} />
                                             </td>
