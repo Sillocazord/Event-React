@@ -154,6 +154,8 @@ const TipoEvento = () => {
                 funcCadastro={cadastrarEvento}
                 valorInput={tipoDeEvento}
                 setValorInput={setTipoDeEvento}
+
+                placeholder = "Tipo Evento"
             />
             <Listar
                 tituloLista="Lista de Tipos Eventos"

@@ -152,6 +152,8 @@ const TipoUsuario = () => {
                 funcCadastro={cadastrarTipoUsuario}
                 valorInput={tipoDeUsuario}
                 setValorInput={setTipoDeUsuario}
+
+                placeholder = "Tipo Usuario"
             />
             <Listar
                 tituloLista="Lista de Tipos Usuarios"

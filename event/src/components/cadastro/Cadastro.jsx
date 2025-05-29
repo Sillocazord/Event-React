@@ -30,20 +30,30 @@ const Cadastro = (props) => {
 
                             {/* Select da pagina Eventos */}
                         <div className="campo_cad_tipo" style={{ display: props.visibilidade }}>
-                            <input type="date" placeholder="Data"/>
-                            <select name="TipoEvento" id="">
-                                <option value="">Vivo</option>
-                                <option value="">Tim</option>
-                                <option value="">Claro</option>
-                                <option value="">Oi</option>
+
+                            <input type="datetime-local" placeholder="Data"/>
+
+                            <select name="TipoEvento" id=""
+                            value={props.valorSelect}
+                            onChange={(e) => props.setValorSelect(e.target.value)}>
+                                <option value="" disabled selected>Selecione</option> 
+                                {props.lista && props.lista.length > 0 && props.lista.map((item) => (
+                                    (
+                                        <option value={item.TipoEventoID}>{item.tituloTipoEvento}</option>
+
+                                    ))
+
+                                )}
                             </select>
 
-                            <select name="Instituições" id="">
-                                <option value="">Sekaaaai</option>
-                                <option value="">Miku Miku</option>
+                            {/* Instituições */}
+                            <select name="Instituições" id=""value={props.InstiSelect}
+                            onChange={(e) => props.setInstSelect(e.target.value)}>
+                                 <option value="" disabled selected>Senai</option> 
                             </select>
 
                             <input type="text" placeholder="Descrição" />
+
                         </div>
                         <Botao nomeDoBotao="Cadastrar" />
                     </div>
