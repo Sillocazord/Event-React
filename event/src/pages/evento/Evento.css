@@ -71,8 +71,10 @@ table{
 }
 table{
     border-collapse: collapse;
+    text-align: center;
 }
-.tabela_eventos th:first-child{
+
+/* .tabela_eventos th:first-child{
     width:420px;
     text-align: start;
     margin-top: 20px;
@@ -95,7 +97,7 @@ table{
 .tabela_eventos th:nth-child(4){
     text-align: center;
     margin-top: 20px;
-}
+} */
 @media screen and (max-width:768px) {
     .tabela_eventos{
         font-size: 12px; 

@@ -9,16 +9,19 @@ import Swal from "sweetalert2";
 import { useEffect,useState } from "react";
 const EventosListar = () => {
     //Constantes
+    //Para cadastro evento
     const [tipoDeEvento, setTipoDeEvento] = useState("")
     const [listaTipoEvento, setListarTipoEvento] = useState([])
-    const [editaEvento, setEditaEvento] = useState ([])
-
+    const [dataEvento, setDataEvento] = useState("")
+    const [descricao, setDescricao] = useState("")
     const [instituicao, setInstituicao] = useState("0EDD8C84-DD13-43AC-886E-85B5BA973C16")
-    // console.log(instituicao);
+     const [evento, setEvento] = useState ("")
+   //----------------------------------------------
     
-    const [evento, setEvento] = useState ("")
+   
     const [listaEvento, setListaEvento] = useState([])
-
+    // const [editaEvento, setEditaEvento] = useState ([])
+    //Atualizar evento
     //Alertas
         function alertar(icone, mensagem) {
             const Toast = Swal.mixin({
@@ -56,15 +59,33 @@ const EventosListar = () => {
             evt.preventDefault();
             if(evento.trim() !=""){
                 try {
-                    await api.post("evento",{})
+                    await api.post("evento",{
+                      nomeEvento: evento,
+                      dataEvento: dataEvento,
+                      descricao: descricao,
+                      tipoEventoID: tipoDeEvento,
+                      instituicaoID: instituicao
+
+                    });
+                    alertar("success","Sucesso! Deu certo meu cria!!")
+                    setEvento("")
+                    setDataEvento("")
+                    setDescricao("")
+                    setTipoDeEvento("")
+                    setInstituicao("")
+                    listarEvento("")
+
                 } catch (error) {
+                    alertar("error","Erro! Entre em contato com o suporte!")
+                    console.log(error);
                     
                 }
             }
+            else{
+              alertar("error","Ta bugaddoooo")
+            }
             
         }
-
-
 
         async function listarTipoEvento() {
         try {
@@ -75,6 +96,8 @@ const EventosListar = () => {
 
         }
     }
+
+
         async function listarEvento() {
             try {
                 const resposta = await api.get("evento")
@@ -127,7 +150,7 @@ const EventosListar = () => {
 
     console.log("Dados para atualizar:", value);
 
-    await api.put(`eventos/${evento.EventoID}`, {
+    await api.put(`evento/${evento.EventoID}`, {
       nomeEvento: value.campo1,
       dataEvento: value.campo2,
       tipoEventoID: value.campo3,  
@@ -169,6 +192,10 @@ const EventosListar = () => {
 
         InstiSelect={instituicao}
         setInstiSelect={setInstituicao}
+
+        setValorInput={setEvento}
+        valorInput={evento}
+        funcCadastro={cadastrarEvento}
 
         />
         <Listar
