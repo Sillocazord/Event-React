@@ -104,6 +104,7 @@ const Evento = () => {
 
         }
     }
+
     function filtarEventos() {
         const hoje = new Date();
         return listaEventos.filter(evento => {
@@ -154,7 +155,7 @@ const Evento = () => {
                             </thead>
                             <tbody>
                                 {listaEventos.length > 0 ? (
-                                    listaEventos.map((item) => (
+                                    filtarEventos() && filtarEventos().map((item) => (
                                         <tr key={item.eventoID} className="itens_eventos">
                                             <td data-cell="Título">{item.nomeEvento}</td>
                                             <td data-cell="Data">{format(item.dataEvento, "dd/MM/yy")}</td>

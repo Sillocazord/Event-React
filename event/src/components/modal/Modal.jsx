@@ -2,9 +2,15 @@ import React, { useEffect, useState } from 'react'
 import ImgDeletar from "../../assets/img/Lixo.png"
 import api from '../../Services/services'
 import "./Modal.css"
+import { set } from 'date-fns'
 
 const Modal = (props) => {
-  const [comentarios, setComentarios] = useState([])
+  const [comentarios, setComentarios] = useState([]);
+
+  const [usuariosID, setUsuariosID] = useState("8C36EDE7-4A87-4C21-AA32-B939795B1616");
+  const [novoComentario, setNovoComentario] = useState("");
+
+
   async function listarComentarios() {
     try {
       const resposta = await api.get(`Feedback/ListarSomenteExibe?id=${props.eventoID}`);
@@ -15,9 +21,15 @@ const Modal = (props) => {
     }
   }
 
-  async function cadastrarComentarios() {
+  async function cadastrarComentarios(comentario) {
     try {
-      
+      await api.post("Feedback",{
+        usuarioID: usuariosID,
+        eventoID: props.eventoID,
+        Descricao: comentario
+      })
+      setNovoComentario();
+
     } catch (error) {
       console.log(error);
       
@@ -35,7 +47,7 @@ const Modal = (props) => {
 
   useEffect(() => {
     listarComentarios();
-  }, [])
+  }, [comentarios])
 
 
 
@@ -57,14 +69,15 @@ const Modal = (props) => {
                 <strong>
                   {item.usuario.nome}
                 </strong>
-                <img src={ImgDeletar} alt="delete" />
+                <img src={ImgDeletar} alt="delete"
+                onClick={()=> deletarComentario(item.feedbackID)} />
                 <p>{item.descricao}</p>
                 <hr />
               </div>
             ))}
             <div>
-              <input type="text" placeholder='Escreva seu comentário...' />
-              <button>
+              <input type="text" placeholder='Escreva seu comentário...' value={novoComentario} onChange={(e) => setNovoComentario(e.target.value)} />
+              <button onClick={() => cadastrarComentarios(novoComentario)}>
                 Cadastrar
               </button>
             </div>
