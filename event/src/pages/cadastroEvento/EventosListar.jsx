@@ -14,7 +14,9 @@ const EventosListar = () => {
     const [listaTipoEvento, setListarTipoEvento] = useState([])
     const [dataEvento, setDataEvento] = useState("")
     const [descricao, setDescricao] = useState("")
-    const [instituicao, setInstituicao] = useState("0EDD8C84-DD13-43AC-886E-85B5BA973C16")
+    const [instituicao, setInstituicao] = useState(["0EDD8C84-DD13-43AC-886E-85B5BA973C1"])
+    // const [instituicaoSelect, setInstituicaoSelect] = useState("")
+    //     //  ("0EDD8C84-DD13-43AC-886E-85B5BA973C16")
      const [evento, setEvento] = useState ("")
    //----------------------------------------------
     
@@ -188,10 +190,11 @@ const EventosListar = () => {
 
         ValorSelect={tipoDeEvento}
         setValorSelect={setListarTipoEvento}
-        lista={listaTipoEvento}
+        listas={listaTipoEvento}
 
         InstiSelect={instituicao}
         setInstiSelect={setInstituicao}
+        listar={instituicao}
 
         setValorInput={setEvento}
         valorInput={evento}

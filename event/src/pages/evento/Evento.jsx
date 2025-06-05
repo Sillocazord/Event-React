@@ -11,22 +11,36 @@ import { format } from "date-fns";
 const Evento = () => {
 
     const [listaEventos, setListaEventos] = useState([]);
+
+    const [tipoModal, setTipoModal] = useState("");
+    //descriçãoEventos ou "comentário"
+    const [dadosModal, setDadosModal] = useState({});
+    //descrição, eventoID, etc.
+    const [modalAberto, setModalAberto] = useState(false);
     async function listarEventos() {
         try {
             const resposta = await api.get("evento");
             setListaEventos(resposta.data)
         } catch (error) {
             console.log(error);
-            
+
         }
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         listarEventos();
     }, [])
 
+    function abrirModal(tipo, dados) {
+        //tipo de modal // dados
+        setModalAberto(true)
+        setTipoModal(tipo)
+        setDadosModal(dados)
+
+    }
+
     return (
-        
+
         <>
             <Header
                 nomeUsuario="Aluno"
@@ -61,14 +75,14 @@ const Evento = () => {
                             <tbody>
                                 {listaEventos.length > 0 ? (
                                     listaEventos.map((item) => (
-                                         <tr key={item.eventoID} className="itens_eventos">
-                                    <td data-cell="Título">{item.nomeEvento}</td>
-                                    <td data-cell="Data">{format(item.dataEvento, "dd/MM/yy")}</td>
-                                    <td data-cell="Tipo Evento">{item.tipoEvento.tituloTipoEvento}</td>
-                                    <td data-cell="Descrição"><img src={Descrito} alt="Bolinha" /></td>
-                                    <td data-cell="Comentários"><img src={Balao} alt="Balao de texto" /></td>
-                                    <td data-cell="Participar"><Checkin /></td>
-                                </tr>
+                                        <tr key={item.eventoID} className="itens_eventos">
+                                            <td data-cell="Título">{item.nomeEvento}</td>
+                                            <td data-cell="Data">{format(item.dataEvento, "dd/MM/yy")}</td>
+                                            <td data-cell="Tipo Evento">{item.tipoEvento.tituloTipoEvento}</td>
+                                            <td data-cell="Descrição"><img src={Descrito} alt="Bolinha" onClick={() => abrirModal("descricaoEvento", { descricao: item.descricao })} /></td>
+                                            <td data-cell="Comentários"><img src={Balao} alt="Balao de texto" onClick={() => abrirModal("comentarios", { eventoID: item.eventoID })} /></td>
+                                            <td data-cell="Participar"><Checkin /></td>
+                                        </tr>
                                     ))
                                 ) : (
                                     <p>sei não vui</p>
@@ -78,7 +92,17 @@ const Evento = () => {
                     </div>
                 </div>
             </section>
-            <Modal/>
+            {modalAberto && (
+                <Modal
+
+                    titulo={tipoModal == "descricaoEvento" ? "Descrição do Evento" : "Comentário"}
+                    tipoModel = {tipoModal}
+                    eventoID = {dadosModal.eventoID}
+                    descricao = {dadosModal.descricao}
+
+                />
+            )}
+
             <Footer />
         </>
     )

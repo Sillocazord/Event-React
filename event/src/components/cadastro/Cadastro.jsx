@@ -40,12 +40,12 @@ const Cadastro = (props) => {
                                     onChange={(e) => props.setValorSelect(e.target.value)}>
 
                                     <option disabled value="" >Selecione</option>
-                                    {props.lista &&
-                                        props.lista.length > 0 &&
-                                        props.lista.map((item) => (
+                                    {props.listas &&
+                                        props.listas.length > 0 &&
+                                        props.listas.map((item) => (
 
                                             <option value={item.TipoEventoID}>{item.tituloTipoEvento}</option>
-//  key={item.TipoEventoID}
+                                            //  key={item.TipoEventoID}
                                         )
 
                                         )}
@@ -54,9 +54,9 @@ const Cadastro = (props) => {
                                 {/* Instituições */}
                                 <select name="Instituições" id="instituicao" value={props.InstiSelect}
                                     onChange={(e) => props.setInstiSelect(e.target.value)}>
-                                    {props.lista &&
-                                        props.lista.length > 0 &&
-                                        props.lista.map((item) => (
+                                    {props.listar &&
+                                        props.listar.length > 0 &&
+                                        props.listar.map((item) => (
                                             <option key={item.instituicaoID} value={item.instituicaoID}>
                                                 {item.nomeFantasia}
                                             </option>
