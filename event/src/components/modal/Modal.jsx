@@ -4,30 +4,50 @@ import api from '../../Services/services'
 import "./Modal.css"
 
 const Modal = (props) => {
-    const [comentarios, setComentarios] = useState([])
-    async function listarComentarios() {
-      try {
-        const resposta = await api.get(`Feedback/ListarSomenteExibe?id=${props.eventoID}`);
-        setComentarios(resposta.data);
-      } catch (error) {
-        console.log(error);
-        
-      }
-    }
+  const [comentarios, setComentarios] = useState([])
+  async function listarComentarios() {
+    try {
+      const resposta = await api.get(`Feedback/ListarSomenteExibe?id=${props.eventoID}`);
+      setComentarios(resposta.data);
+    } catch (error) {
+      console.log(error);
 
-    useEffect(()=> {
-        listarComentarios();
-    }, [])
+    }
+  }
+
+  async function cadastrarComentarios() {
+    try {
+      
+    } catch (error) {
+      console.log(error);
+      
+    }
+  }
+
+  async function deletarComentario() {
+    try {
+      
+    } catch (error) {
+      console.log(error);
+      
+    }
+  }
+
+  useEffect(() => {
+    listarComentarios();
+  }, [])
+
+
 
   return (
     <>
 
-    <div className="model-overlay" onClick={props.fecharModal}> </div>
+      <div className="model-overlay" onClick={props.fecharModal}> </div>
 
       <div className="model">
         <h1>{props.titulo}</h1>
-      </div>
-    <div className="model_conteudo">
+     
+      <div className="model_conteudo">
         {props.tipoModel === "descricaoEvento" ? (
           <p>{props.descricao}</p>
         ) : (
@@ -43,17 +63,18 @@ const Modal = (props) => {
               </div>
             ))}
             <div>
-              <input type="text" placeholder='Escreva seu comentário...'/>
+              <input type="text" placeholder='Escreva seu comentário...' />
               <button>
                 Cadastrar
               </button>
             </div>
           </>
-        )}
-    </div>
+        )} 
+        </div>
+      </div>
 
     </>
-    
+
   )
 }
 
