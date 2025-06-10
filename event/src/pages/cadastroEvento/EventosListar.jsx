@@ -42,21 +42,7 @@ const EventosListar = () => {
                 title: mensagem
             });
         }
-        // json para cadastrar um evento:
-// {
-//   "dataEvento": "2025-05-26T20:12:21.564Z",
-//   "nomeEvento": "C# Events",
-//   "descricao": "Aqui temos uma descricao sobre o evento",
-//   "idTipoEvento": "16f8e98f-e654-490e-a687-9933dc15093f",
-//   "idInstituicao": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-//   "instituicao": {
-//  "idInstituicao": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-//     "cnpj": "12345678000199",
-//     "endereco": "Rua niteroi 180",
-//     "nomeFantasia": "Senai"
-//   }
- 
-// }
+
         async function cadastrarEvento(evt) {
             evt.preventDefault();
             if(evento.trim() !=""){

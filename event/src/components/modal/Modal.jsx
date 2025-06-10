@@ -7,7 +7,7 @@ import { set } from 'date-fns'
 const Modal = (props) => {
   const [comentarios, setComentarios] = useState([]);
 
-  const [usuariosID, setUsuariosID] = useState("8C36EDE7-4A87-4C21-AA32-B939795B1616");
+  const [usuarioID, setUsuarioID] = useState("8C36EDE7-4A87-4C21-AA32-B939795B1616");
   const [novoComentario, setNovoComentario] = useState("");
 
 
@@ -24,11 +24,11 @@ const Modal = (props) => {
   async function cadastrarComentarios(comentario) {
     try {
       await api.post("Feedback",{
-        usuarioID: usuariosID,
-        eventoID: props.eventoID,
-        Descricao: comentario
+        usuarioId: usuarioID ,
+        eventoId: props.eventoID,
+        descricao: comentario
       })
-      setNovoComentario();
+      // setNovoComentario();
 
     } catch (error) {
       console.log(error);
@@ -36,9 +36,9 @@ const Modal = (props) => {
     }
   }
 
-  async function deletarComentario() {
+  async function deletarComentario(feedbackID) {
     try {
-      
+      await api.delete(`feedback/${feedbackID}`)
     } catch (error) {
       console.log(error);
       
