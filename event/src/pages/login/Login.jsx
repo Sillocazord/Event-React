@@ -7,11 +7,15 @@ import Swal from "sweetalert2";
 import { userDecodeToken } from "../../auth/Auth";
 import  secureLocalStorage  from  "react-secure-storage";
 import { Navigate, redirect, useNavigate } from "react-router-dom";
+import { useAuth } from "../../contexts/AuthContext";
 const Login = () => {
 
     const [email, setEmail] = useState("")
     const [senha, setSenha] = useState("")
+
     const navigate = useNavigate();
+
+    const {setUsuario} = useAuth();
 
     function alertar(icone, mensagem) {
             const Toast = Swal.mixin({
@@ -34,7 +38,6 @@ const Login = () => {
     async function realizarAutenticacao(e) {
         e.preventDefault();
 
-
         const usuario = {
             email: email,
             senha: senha
@@ -46,6 +49,11 @@ const Login = () => {
                 if(token){
                     //token será decodificado
                     const tokenDecodificado = userDecodeToken(token)
+
+                    setUsuario(tokenDecodificado);
+
+
+
                     secureLocalStorage.setItem("tokenLogin", JSON.stringify(tokenDecodificado));
                     if(tokenDecodificado.tipoUsuario === "Aluno"){
                         // redirect(<Evento/>);

@@ -4,8 +4,6 @@ import imagem from "../../assets/img/more.png"
 import imagem2 from "../../assets/img/Imagem2.png"
 import imagem3 from "../../assets/img/Imagem3.png"
 const Cadastro = (props) => {
-
-
     return (
         <>
             <section className="section_cadastro">
@@ -33,20 +31,21 @@ const Cadastro = (props) => {
                             {/* Select da pagina Eventos */}
                             <div className="campo_cad_tipo" style={{ display: props.visibilidade }}>
 
-                                <input type="datetime-local" placeholder="Data" />
+                                <input type="datetime-local" placeholder="Data" 
+                                value={props.inputData}
+                                onChange={(e) => props.setInputData(e.target.value)}
+                                />
 
                                 <select name="TipoEvento" id=""
                                     value={props.valorSelect}
                                     onChange={(e) => props.setValorSelect(e.target.value)}>
 
-                                    <option disabled value="" >Selecione</option>
-                                    {props.listas &&
-                                        props.listas.length > 0 &&
-                                        props.listas.map((item) => (
-
+                                    <option disabled value="" >Selecione o Tipo de Evento</option>
+                                    {props.listas && props.listas.length > 0 && props.listas.map((item) => (
+                                            (
                                             <option value={item.TipoEventoID}>{item.tituloTipoEvento}</option>
                                             //  key={item.TipoEventoID}
-                                        )
+                                        ))
 
                                         )}
                                 </select>
@@ -54,20 +53,18 @@ const Cadastro = (props) => {
                                 {/* Instituições */}
                                 <select name="Instituições" id="instituicao" value={props.InstiSelect}
                                     onChange={(e) => props.setInstiSelect(e.target.value)}>
-                                    {props.listar &&
-                                        props.listar.length > 0 &&
-                                        props.listar.map((item) => (
-                                            <option key={item.instituicaoID} value={item.instituicaoID}>
-                                                {item.nomeFantasia}
-                                            </option>
-                                        )
-
-                                        )}
+                                    <option disabled value="">Selecione a instituição</option>
+                                    <option value="FF366029-3303-4183-9830-55F3B6592315">Senai</option>
+                                    {/* <option value=""></option> */}
                                     {/* <option value="" disabled selected>Senai</option>  */}
 
                                 </select>
 
-                                <input type="text" placeholder="Descrição" />
+                                <input type="text" 
+                                placeholder="Descrição"
+                                value={props.inputDescricao}
+                                onChange={(e) => props.setInputDescricao(e.target.value)}
+                                />
 
                             </div>
                             <Botao nomeDoBotao="Cadastrar" />

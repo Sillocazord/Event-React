@@ -9,6 +9,7 @@ import Modal from "../../components/modal/Modal";
 import api from "../../Services/services";
 import Swal from "sweetalert2";
 import { format } from "date-fns";
+import { useAuth } from "../../contexts/AuthContext";
 
 const Evento = () => {
 
@@ -19,8 +20,9 @@ const Evento = () => {
     const [dadosModal, setDadosModal] = useState({});
     //descrição, eventoID, etc.
     const [modalAberto, setModalAberto] = useState(false);
+    const {usuario} = useAuth();
     //id do usuario Data
-    const [usuarioID, setUsuarioID] = useState("8C36EDE7-4A87-4C21-AA32-B939795B1616")
+    // const [usuarioID, setUsuarioID] = useState("")
     //filtro
     const [filtroData, setFiltroData] = useState(["todos"]);
 
@@ -31,7 +33,7 @@ const Evento = () => {
             const resposta = await api.get("evento");
             const todosOsEventos = resposta.data;
 
-            const respostaPresenca = await api.get(`presenca/ListarMinhasPresencas/${usuarioID}`)//+
+            const respostaPresenca = await api.get(`presenca/ListarMinhasPresencas/${usuario.usuarioID}`)//+
             const minhasPresencas = respostaPresenca.data;
 
             const eventosComPresenca = todosOsEventos.map((evento) => {
@@ -65,6 +67,8 @@ const Evento = () => {
 
     useEffect(() => {
         listarEventos();
+        // console.log(usuario);
+        
     }, [])
 
     function abrirModal(tipo, dados) {
@@ -95,7 +99,7 @@ const Evento = () => {
 
             } else {
                 //cadastrar uma nova presenca
-                await api.post("presenca", {situacao:true, usuarioID: usuarioID, eventoID: eventoID});
+                await api.post("presenca", {situacao:true, usuarioID: usuario.usuarioID, eventoID: eventoID});
                 Swal.fire('Confirmado!','Sua presença foi confirmada!','success');
 
             }
